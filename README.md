@@ -27,7 +27,13 @@ install_github("alliecarter/581FinalProjectCarter")
 
 Then, simply library(acdocudat).
 
-## Example
+## Data: mtcars
+
+To explore the functions in this package we will use the dataset mtcars.
+This datasets contains fuel consumption and design variables for 32 cars
+and is documented in ?mtcars.
+
+## Variable Names/Types
 
 Oftentimes, we are given datasets to clean, summarize, or a number of
 other tasks. The following examples are useful to help interpret
@@ -54,8 +60,10 @@ varinfo(mtcars)
 #> carb     carb numeric
 ```
 
+## Summary Statistics
+
 Now we want to get a sense of how much data is missing, how many
-variables we have, and the ranges of data for each numeric variable
+observations we have, and the ranges of data for each numeric variable
 
 ``` r
 NFun(mtcars)
@@ -72,6 +80,8 @@ NFun(mtcars)
 #> 10     gear 32       0  3.000   4.000   5.000   3.687500
 #> 11     carb 32       0  1.000   2.000   8.000   2.812500
 ```
+
+## Variable Information Dataframe
 
 Perhaps we may want to run everything together and get a nice table
 summarizing the variables available in this dataset.
@@ -92,6 +102,28 @@ Ncomb(mtcars)
 #> 11     carb numeric 32       0  1.000   2.000   8.000   2.812500
 ```
 
+## Formatted Table of Codebook Information
+
+The tablfun function will give you a nice formatted table of your
+variables summarized with all the information collected in Ncomb. We
+have the following code:
+
+tablfun(.data, headcolor = “white”, bodycolor = “white”, bodftcolor =
+“black”, topftcolor = “black”)
+
+With the following arguments: .data (The name of the dataset to
+summarize.)
+
+headcolor (The background color of the header of the table.)
+
+bodycolor (The background color of the body of the table.)
+
+bodftcolor (The font color of the header of the table.)
+
+topftcolor (The font color of the body of the table.)
+
+## Read Table/Codebook out to PDF File
+
 Depending on if we will be presenting/collaborating, we may want to have
 a cleaner, formatted output of variable information to share with
 others.
@@ -105,6 +137,8 @@ pdfout(mtcars, "CarsCodebook2020")
 #>   2
 ```
 
+## Variable Summaries Interactive Shiny Gadget
+
 Within the R session it is often helpful to be able to isolate variables
 one by one.
 
@@ -113,5 +147,5 @@ ShinyTable(mtcars)
 #> Loading required package: shiny
 #> Warning: package 'shiny' was built under R version 4.0.3
 #> 
-#> Listening on http://127.0.0.1:3724
+#> Listening on http://127.0.0.1:3657
 ```
