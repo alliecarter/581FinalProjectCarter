@@ -1,0 +1,11 @@
+Package: acdocudat
+Type: Package
+Title: Explores data and ultimately helps create data documentation
+Version: 0.1.0
+Author: Allie Carter <alternet@iu.edu>
+Maintainer: Allie Carter <alternet@iu.edu>
+Description: This package helps the user create a data dictionary/codebook for a user selected R dataset along with some summary statistics to help to get an initial sense of data completeness, possible outliers, and more. The package will provide functions that can be used to form different sections of the codebook, put a codebook table together, and be output to a PDF. The package will work with all different types of datasets in order to be useful within a data management setting.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
