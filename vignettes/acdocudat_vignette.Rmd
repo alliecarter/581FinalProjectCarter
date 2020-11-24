@@ -15,7 +15,46 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+The goal of acdocudat is to help the user create a data dictionary/codebook for a user selected R dataset along with some summary statistics to help to get an initial sense of data completeness, possible outliers, and more. The package will provide functions that can be used to form different sections of the codebook, put a codebook table together, and be output to a PDF. The package will work with all different types of datasets in order to be useful within a data management setting.
+
+## Installation
+
+You can install the released version of acdocudat from github by running the following code:
+
+``` r
+install.github("alliecarter/581FinalProjectCarter")
+```
+Then, simply library(acdocudat).
+
+## Example
+
+Oftentimes, we are given datasets to clean, summarize, or a number of other tasks. The following examples are useful to help interpret variable meanings and communicate them cleanly to an outside user or collaborator.
+
+```{r example}
 library(acdocudat)
+## See what types of variables are in our dataset
+varinfo(mtcars)
+```
+
+Now we want to get a sense of how much data is missing, how many variables we have, and the ranges of data for each numeric variable
+```{r}
+NFun(mtcars)
+```
+
+Perhaps we may want to run everything together and get a nice table summarizing the variables available in this dataset.
+```{r}
+Ncomb(mtcars)
+```
+
+Depending on if we will be presenting/collaborating, we may want to have a cleaner, formatted output of variable information to share with others.
+
+If we are sharing, we can output to a pdf with a center tabled of all available summarized information.
+```{r}
+pdfout(mtcars, "CarsCodebook2020")
+```
+
+Within the R session it is often helpful to be able to isolate variables one by one.
+```{r}
+ShinyTable(mtcars)
 ```
 

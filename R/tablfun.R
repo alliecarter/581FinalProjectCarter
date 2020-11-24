@@ -15,7 +15,7 @@
 tablfun <- function(.data, headcolor="white", bodycolor="white", bodftcolor="black", topftcolor="black")
 {
   flextable(Ncomb(.data)) %>%
-    set_header_labels(variable="Variable", typ="Type",  n="N", missing="Missing", min="Minimum", max="Maximum") %>%
+    set_header_labels(variable="Variable", typ="Type",  n="N", missing="Missing", min="Minimum", median="Median", max="Maximum", mean="Mean") %>%
     bg(bg=headcolor, part="header") %>%
     bg(bg=bodycolor, part="body") %>%
     color(color = bodftcolor, part="body") %>%

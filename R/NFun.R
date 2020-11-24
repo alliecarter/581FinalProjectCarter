@@ -16,10 +16,12 @@ NFun <- function(.data)
   missing <-sapply(.data, function(var) sum(length(which(is.na(var)))))
   df1 <- data.frame(names(.data), n, missing)
   numvar <- .data %>% select(where(is.numeric))
-  minmax <- data.frame(names(numvar), sapply(numvar, min), sapply(numvar, max))
+  minmax <- data.frame(names(numvar), sapply(numvar, min), sapply(numvar, median), sapply(numvar, max), sapply(numvar, mean))
   sumdf <- left_join(df1,minmax, by = c("names..data." = "names.numvar."))
   names(sumdf)[1]="variable"
   names(sumdf)[4]="min"
-  names(sumdf)[5]="max"
+  names(sumdf)[5]="median"
+  names(sumdf)[6]="max"
+  names(sumdf)[7]="mean"
   return(sumdf)
 }
