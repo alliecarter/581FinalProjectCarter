@@ -10,7 +10,7 @@ varinfo(.data)
 \item{.data}{The name of the dataset to summarize.}
 }
 \value{
-
+A dataframe
 }
 \description{
 This function will grab the variables names from the chosen input data set and list them in a dataframe alongside their class.

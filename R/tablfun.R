@@ -1,9 +1,17 @@
-#Fourth Function: Make flextable of codebook information
-
-#<i>This function takes dataframe containing the information about the dataset and uses flextable to make it into a clean, goodlooking table that can be used as a codebook within the R markdown file or output to a PDF to share with collaborators. Some additional development of this function will include further formatting and perhaps adding formatting options as additional arguments.</i>
-#Need library flextable and dplyr
-
-
+#' Formatted Table of Codebook Information
+#' @description This function takes the combined dataframe containing the information about the dataset and uses flextable to make it into a clean, formatted table that can be used as a codebook within the R markdown file or output to a PDF to share with collaborators.
+#' @param .data The name of the dataset to summarize.
+#' @param headcolor The background color of the header of the table.
+#' @param bodycolor The background color of the body of the table.
+#' @param bodftcolor The font color of the header of the table.
+#' @param topftcolor The font color of the body of the table.
+#'
+#' @return
+#' @export
+#'
+#' @import flextable dplyr
+#' @examples
+#' tablfun(iris, "pink", "yellow", "black", "blue")
 tablfun <- function(.data, headcolor="white", bodycolor="white", bodftcolor="black", topftcolor="black")
 {
   flextable(Ncomb(.data)) %>%

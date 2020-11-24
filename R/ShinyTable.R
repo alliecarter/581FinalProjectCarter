@@ -1,9 +1,13 @@
-library(shiny)
-library(ggplot2)
-library(dplyr)
-library(miniUI)
-
-
+#' Variable Summaries Shiny Gadget
+#'
+#' @description This shiny gadget allows you to choose one variable at a time and then displays the summary information about that variable.
+#' @param .data The name of the dataset to summarize.
+#'
+#' @return
+#' @export
+#' @import shiny miniUI
+#' @examples
+#' ShinyTable(iris)
 ShinyTable <- function(.data) {
 
   ui <- miniPage(

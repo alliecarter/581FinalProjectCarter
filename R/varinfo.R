@@ -2,7 +2,7 @@
 #' @description This function will grab the variables names from the chosen input data set and list them in a dataframe alongside their class.
 #' @param .data The name of the dataset to summarize.
 #'
-#' @return
+#' @return A dataframe
 #' @export
 #'
 #' @examples
