@@ -5,7 +5,7 @@
 #'
 #' @return
 #' @export
-#' @import gridExtra grid qpdf
+#' @import gridExtra grid
 #'
 #' @examples
 #' pdfout(iris, "IrisCodebook2020")

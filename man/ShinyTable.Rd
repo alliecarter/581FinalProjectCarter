@@ -13,7 +13,7 @@ ShinyTable(.data)
 
 }
 \description{
-This shiny gadget allows you to choose one variable at a time and then displays the summary information about that variable.
+This shiny gadget allows you to choose one variable at a time and then displays the summary information about that variable. Note: Only numeric variables can be summarized.
 }
 \examples{
 ShinyTable(iris)

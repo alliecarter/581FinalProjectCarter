@@ -1,6 +1,6 @@
 #' Variable Summaries Shiny Gadget
 #'
-#' @description This shiny gadget allows you to choose one variable at a time and then displays the summary information about that variable.
+#' @description This shiny gadget allows you to choose one variable at a time and then displays the summary information about that variable. Note: Only numeric variables can be summarized.
 #' @param .data The name of the dataset to summarize.
 #'
 #' @return
