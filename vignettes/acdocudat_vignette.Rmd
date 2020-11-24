@@ -22,7 +22,7 @@ The goal of acdocudat is to help the user create a data dictionary/codebook for 
 You can install the released version of acdocudat from github by running the following code:
 
 ``` r
-install.github("alliecarter/581FinalProjectCarter")
+install_github("alliecarter/581FinalProjectCarter")
 ```
 Then, simply library(acdocudat).
 
